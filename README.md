@@ -6,7 +6,7 @@ common facilities that such games need. This is just one component of many.
 
 ## About this Library ##
 
-This library is a sample Jagati package that can copied to create
+This library is a sample Jagati package that can copied to create a new Jagati Package or game project using the Jagati.
 
 ## Build Status ##
 
