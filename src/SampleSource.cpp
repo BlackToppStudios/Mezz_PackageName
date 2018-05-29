@@ -38,9 +38,6 @@
    John Blackwood - makoenergy02@gmail.com
 */
 
-#ifndef PackageName_SourceName_cpp
-#define PackageName_SourceName_cpp
-
 #include "SampleHeader.h"
 
 /// @file
@@ -50,5 +47,3 @@
 
 int SampleCodeThatReturnsNumber()
     { return 42; }
-
-#endif
