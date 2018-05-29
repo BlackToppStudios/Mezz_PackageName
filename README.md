@@ -14,7 +14,7 @@ The current Travis CI (Apple - GCC/Clang) build status is:
 [![Build Status](https://travis-ci.org/BlackToppStudios/Mezz_PackageName.svg?branch=master)](https://travis-ci.org/BlackToppStudios/Mezz_PackageName)
 
 The current Appveyor (Windows - MinGW/Msvc) build status is:
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/BlackToppStudios/Mezz_PackageName?branch=master&svg=true)](https://ci.appveyor.com/project/Sqeaky/mezz-foundation)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/BlackToppStudios/Mezz_PackageName?branch=master&svg=true)](https://ci.appveyor.com/project/Sqeaky/mezz-packagename)
 
 The current code coverage for tests is:
 [![codecov](https://codecov.io/gh/BlackToppStudios/Mezz_PackageName/branch/master/graph/badge.svg)](https://codecov.io/gh/BlackToppStudios/Mezz_PackageName)
