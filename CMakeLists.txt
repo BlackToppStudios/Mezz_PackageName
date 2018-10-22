@@ -86,6 +86,10 @@ ShowList("Doxygen Input Files:" "\t" "${PackageNameDoxFiles}")
 AddJagatiLibrary()
 CreateCoverageTarget(${PackageNameLib} "${PackageNameSourceFiles}")
 
+# Uncomment this if you want to include files in lib/ in your source. Some Libraries can get away
+# with this simple scheme, some need much more sophistication.
+#target_include_directories(${PackageNameLib} PRIVATE "${PackageNameLibDir}")
+
 AddTestFile("SampleTest.h")
 EmitTestCode()
 AddTestTarget()
