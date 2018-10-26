@@ -45,8 +45,8 @@ pipeline {
                         }
                     }
                 }
-                stage('RaspianJessie') {
-                    agent { label "RaspianJessie" }
+                stage('RaspbianJessie') {
+                    agent { label "RaspbianJessie" }
                     steps {
                         checkout scm
                         sh 'mkdir -p build-debug'
@@ -202,8 +202,8 @@ pipeline {
                         }
                     }
                 }
-                stage('RaspianJessie') {
-                    agent { label "RaspianJessie" }
+                stage('RaspbianJessie') {
+                    agent { label "RaspbianJessie" }
                     steps {
                         checkout scm
                         sh 'mkdir -p build-release'

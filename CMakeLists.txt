@@ -95,5 +95,5 @@ EmitTestCode()
 AddTestTarget()
 
 SetCodeCoverage()
-AddIDEVisibility(".travis.yml")
+AddIDEVisibility("Jenkinsfile")
 message(STATUS "${PROJECT_NAME} - Ending Configuration.")
