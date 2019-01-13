@@ -37,8 +37,8 @@
    Joseph Toppi - toppij@gmail.com
    John Blackwood - makoenergy02@gmail.com
 */
-#ifndef PackageName_HeaderName_cpp
-#define PackageName_HeaderName_cpp
+#ifndef Mezz_PackageName_HeaderName_cpp
+#define Mezz_PackageName_HeaderName_cpp
 
 
 /// @file
