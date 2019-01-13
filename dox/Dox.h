@@ -37,14 +37,14 @@
    Joseph Toppi - toppij@gmail.com
    John Blackwood - makoenergy02@gmail.com
 */
-#ifndef PackageName_Dox_h
-#define PackageName_Dox_h
+#ifndef Mezz_PackageName_Dox_h
+#define Mezz_PackageName_Dox_h
 
 /// @file
 /// @brief The main documentation header to include for PackageName
 
 /// @page Mezz_PackageName Title of package
-/// Describe this package here, include extra items that refer to items that are hard to document in 
+/// Describe this package here, include extra items that refer to items that are hard to document in
 /// place.
 
 #endif

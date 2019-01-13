@@ -37,8 +37,8 @@
    Joseph Toppi - toppij@gmail.com
    John Blackwood - makoenergy02@gmail.com
 */
-#ifndef PackageName_SmapleTest_h
-#define PackageName_SmapleTest_h
+#ifndef Mezz_PackageName_SmapleTest_h
+#define Mezz_PackageName_SmapleTest_h
 
 /// @file
 /// @brief Tests for the stuff in SampleHeader and SampleSource
