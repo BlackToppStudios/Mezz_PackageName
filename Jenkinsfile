@@ -15,7 +15,7 @@ pipeline {
                     steps {
                         checkout scm
                         sh 'mkdir -p build-debug'
-                        dir('build-debug') { sh """
+                        dir('build-debug') { bash """#!/bin/bash
                             hostname &&
                             cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=DEBUG -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja &&
@@ -184,7 +184,7 @@ pipeline {
                     steps {
                         checkout scm
                         sh 'mkdir -p build-release'
-                        dir('build-release') { sh """
+                        dir('build-release') { bash """#!/bin/bash
                             hostname &&
                             cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=RELEASE -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja &&
