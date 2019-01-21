@@ -20,6 +20,7 @@ pipeline {
                             cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=DEBUG -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=ON &&
                             ninja &&
                             ./PackageName_Tester xml &&
+                            ninja help &&
                             ninja PackageNameCoverage &&
                             bash <(curl -s https://codecov.io/bash)
                         """ }
