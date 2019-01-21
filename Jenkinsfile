@@ -19,7 +19,9 @@ pipeline {
                             hostname &&
                             cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=DEBUG -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja &&
-                            ./PackageName_Tester xml
+                            ./PackageName_Tester xml &&
+                            ninja TestCoverage &&
+                            bash <(curl -s https://codecov.io/bash)
                         """ }
                     }
                     post {
@@ -74,8 +76,9 @@ pipeline {
                         dir('build-debug') { sh """
                             hostname &&
                             cmake -E env CXXFLAGS="-fno-var-tracking" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=DEBUG -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
-                            ninja  &&
-                            ./PackageName_Tester xml
+                            ninja &&
+                            ./PackageName_Tester xml &&
+                            valgrind ./PackageName_Tester
                          """ }
                      }
                      post {
@@ -107,7 +110,8 @@ pipeline {
                             hostname &&
                             cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=DEBUG -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja &&
-                            ./PackageName_Tester xml
+                            ./PackageName_Tester xml &&
+                            valgrind ./PackageName_Tester
                         """ }
                     }
                     post {
@@ -184,7 +188,9 @@ pipeline {
                             hostname &&
                             cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=RELEASE -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja &&
-                            ./PackageName_Tester xml
+                            ./PackageName_Tester xml &&
+                            ninja TestCoverage &&
+                            bash <(curl -s https://codecov.io/bash)
                         """ }
                     }
                     post {
@@ -240,7 +246,8 @@ pipeline {
                             hostname &&
                             cmake -E env CXXFLAGS="-fno-var-tracking" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=RELEASE -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja  &&
-                            ./PackageName_Tester xml
+                            ./PackageName_Tester xml &&
+                            valgrind ./PackageName_Tester
                          """ }
                      }
                      post {
@@ -272,7 +279,8 @@ pipeline {
                             hostname &&
                             cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=RELEASE -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja &&
-                            ./PackageName_Tester xml
+                            ./PackageName_Tester xml &&
+                            valgrind ./PackageName_Tester
                         """ }
                     }
                     post {
