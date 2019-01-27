@@ -52,10 +52,10 @@ if(NOT JAGATI_Download)
     option(JAGATI_Download "Should the Jagati be downloaded automatically" ON)
 endif(NOT JAGATI_Download)
 if(JAGATI_Download)
-    set(JAGATI_Checksum "04ab32b7021c9ca0f1ccbda42bc0f3294a42002d1b27fe0814b\
-b9d669ff4f84f5fbee1306a4841910c5aa84ec477980ade9219ad33d88b70984a7cc4dad8be61"
+    set(JAGATI_Checksum "92f7a77ef66a65969fbe0bb4b1c575018a500b66ee756f7bbcb\
+f25365195e01ca357455e7adb2648f40f1cd1b0776ee83d246d3e3fa6bd6e4baad71369dc5883"
         CACHE STRING "Check that when the Jagati is downloaded the right one is used (for consistency and security).")
-    set(JAGATI_Url "https://raw.githubusercontent.com/BlackToppStudios/Jagati/0.26.0/Jagati.cmake"
+    set(JAGATI_Url "https://raw.githubusercontent.com/BlackToppStudios/Jagati/0.27.2/Jagati.cmake"
         CACHE STRING "Where to download the Jagati from.")
     file(DOWNLOAD "${JAGATI_Url}" "${JAGATI_File}" EXPECTED_HASH SHA512=${JAGATI_Checksum})
 endif(JAGATI_Download)
