@@ -17,12 +17,9 @@ pipeline {
                         sh 'mkdir -p build-debug'
                         dir('build-debug') { sh """#!/bin/bash
                             hostname &&
-                            cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=DEBUG -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=ON &&
+                            cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=DEBUG -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja &&
-                            ./PackageName_Tester xml &&
-                            ninja help &&
-                            ninja PackageNameCoverage &&
-                            bash <(curl -s https://codecov.io/bash)
+                            ./PackageName_Tester xml
                         """ }
                     }
                     post {
@@ -187,11 +184,9 @@ pipeline {
                         sh 'mkdir -p build-release'
                         dir('build-release') { sh """#!/bin/bash
                             hostname &&
-                            cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=RELEASE -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=ON &&
+                            cmake -E env CXXFLAGS="-fno-var-tracking-assignments" cmake -G"Ninja" .. -DCMAKE_BUILD_TYPE=RELEASE -DMEZZ_BuildDoxygen=OFF -DMEZZ_CodeCoverage=OFF &&
                             ninja &&
-                            ./PackageName_Tester xml &&
-                            ninja PackageNameCoverage &&
-                            bash <(curl -s https://codecov.io/bash)
+                            ./PackageName_Tester xml
                         """ }
                     }
                     post {
